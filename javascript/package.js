@@ -43,9 +43,15 @@ function toggleLang() {
 const title = document.getElementById('content-title');
 const subtitle = document.getElementsByClassName('content-subtitle');
 var paragraph = document.getElementsByClassName('paragraph');
+var navitem = document.getElementsByClassName('nav-item');
 
 function langSelect(lang){
     if (lang == 'pt'){
+
+      navitem[0].textContent = 'Início';
+      navitem[1].textContent = 'Desenvolvimento';
+      navitem[2].textContent = 'Prática';
+      navitem[3].textContent = 'Conclusão';
 
       title.textContent = '🌱✈️ Entenda o que é turismo sustentável';
       paragraph[0].textContent = 'Neste documento você irá aprender sobre o que é turismo sustentável e como aplicá-lo em suas viagens.';
@@ -55,6 +61,11 @@ function langSelect(lang){
       paragraph[2].textContent = 'O turismo sustentável é um modelo de turismo que busca minimizar os impactos negativos sobre o meio ambiente, a cultura local e a economia, promovendo a conservação dos recursos naturais e a valorização das comunidades locais. Ele incentiva práticas que respeitam o meio ambiente, como a preservação da biodiversidade e o uso responsável de recursos naturais. Já o turismo cultural se concentra na promoção e valorização da cultura, tradições, história e modos de vida das comunidades locais. Esse tipo de turismo permite que os visitantes conheçam e interajam com a cultura local, promovendo o intercâmbio cultural e a preservação de patrimônios imateriais.';
 
     } else if (lang == 'en'){
+
+      navitem[0].textContent = 'Home';
+      navitem[1].textContent = 'Development';
+      navitem[2].textContent = 'Example';
+      navitem[3].textContent = 'Conclusion';
 
       title.textContent = `🌱✈️ Get what 'EcoTurism' is`;
       paragraph[0].textContent = `In this document, you'll learn about what EcoTurism is and how to apply it to your trips.`;

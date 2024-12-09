@@ -82,10 +82,10 @@ function iconToggle(){
 }
 
 function changeIcons(setTheme){
-    document.getElementById('main-logo').setAttribute('src', `img/${setTheme}icons/etec.png`);
-    document.getElementById('etec-logo').setAttribute('src', `img/${setTheme}icons/etec.png`);
-    document.getElementById('cps-logo').setAttribute('src', `img/${setTheme}icons/cps.png`);
-    document.getElementById('sp-logo').setAttribute('src', `img/${setTheme}icons/sp.png`);
+    document.getElementById('main-logo').setAttribute('src', `./img/${setTheme}icons/etec.png`);
+    document.getElementById('etec-logo').setAttribute('src', `./img/${setTheme}icons/etec.png`);
+    document.getElementById('cps-logo').setAttribute('src', `./img/${setTheme}icons/cps.png`);
+    document.getElementById('sp-logo').setAttribute('src', `./img/${setTheme}icons/sp.png`);
 }
 
 // Members list
@@ -109,12 +109,30 @@ member['name'] = [
     'Khiuane Carla Santos da Silva',
     'Pedro Kineipe'
 ];
+member['age'] = [
+  '16 anos',
+  '17 anos',
+  '16 anos',
+  '16 anos',
+  '16 anos',
+  '17 anos',
+  '17 anos'
+]
+member['city'] = [
+  'Arujá/SP',
+  'Arujá/SP',
+  'Arujá/SP',
+  'Santa Isabel/SP',
+  'Arujá/SP',
+  'Snata Isabel/SP',
+  'Arujá/SP'
+]
 
 const container = document.getElementById('members');
 for(let i = 0; i < member['name'].length; i++){
     container.insertAdjacentHTML('beforeend', `
         <li class="member" onclick="profile('${i}')">
-            <img src="img/pfps/${member.pfp[i]}" class="pfp"/>
+            <img src="./img/pfps/${member.pfp[i]}" class="pfp"/>
             <p class="names"> ${member.name[i]} </p>
         </li>
     `);
@@ -126,7 +144,9 @@ function profile(memberId){
   document.getElementById('profile').style.visibility = 'visible';
   document.getElementById('profile').style.opacity = '1';
   document.getElementById('member-name').innerHTML = member.name[memberId];
-  document.getElementById('profile-banner').innerHTML = '<img src="img/pfps/'+ member.pfp[memberId] +'" class="member-pfp">';
+  document.getElementById('member-age').innerHTML = member.age[memberId];
+  document.getElementById('member-city').innerHTML = member.city[memberId];
+  document.getElementById('profile-banner').innerHTML = '<img src="./img/pfps/'+ member.pfp[memberId] +'" class="member-pfp">';
 }
 document.getElementById('profile').addEventListener('click', function(){
   document.getElementById('profile').style.visibility = 'hidden';

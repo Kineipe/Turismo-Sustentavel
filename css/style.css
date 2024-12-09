@@ -59,12 +59,12 @@ body, #top-bar, #page-footer{
     right: 0;
     left: 0;
     padding: 0px 30px;
+    background-color: var(--background1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 8px;
-    transition: background-color 0.3s ease;
 }
 #logos{
     width: auto;
@@ -479,7 +479,7 @@ body, #top-bar, #page-footer{
 }
 #profile-modal{
     width: 280px;
-    height: 75%;
+    height: 50%;
     border-radius: 8px;
     padding: 12px;
     background-color: var(--background1);
@@ -508,7 +508,7 @@ body, #top-bar, #page-footer{
     width: 100%;
     height: 100%;
     grid-area: profile-info;
-    padding: 60px 5px;
+    padding: 60px 5px 20px 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -518,6 +518,14 @@ body, #top-bar, #page-footer{
     color: var(--text);
     font-size: 1.3rem;
     font-weight: bold;
+}
+#member-city{
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Footer */
@@ -596,8 +604,18 @@ body, #top-bar, #page-footer{
 /* Mobile Responsive */
 
 @media only screen and (max-device-width: 700px){
-    #main-logo, .clickable, .division{
+    #content{
+        height: 100vh;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas: 'main-content';
+    }
+    #main-logo, .clickable, .division, #nav-sidebar{
         display: none;
+    }
+    #top-bar{
+        width: 100vh;
     }
     #content{
         padding: 3px 8%;
