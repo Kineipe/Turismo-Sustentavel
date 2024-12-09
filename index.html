@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Pedro Kineipe"/>
+        <title> Turismo Sustentável - Blog </title>
+        <meta name="keyword" content="turismo, turismo sustentavel, sustentabilidade"/>
+        <meta name="description" content="Nesta página será apresentado o conceito de 'Turismo Sustentável'."/>
+        <link rel="stylesheet" href="assets/bootstrap-icons/font/bootstrap-icons.css"/>
+        <link rel="stylesheet" href="assets/boostrap-flags/flag-icons-master/flag-icons.min.css"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <link rel="icon" href="img/icons/favicon.ico" type="image/x-icon" size="16x16"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+
+        <!-- Top-bar -->
+
+        <header id="top-bar">
+
+            <section id="logos">
+                <a href="https://etecsantaisabel.cps.sp.gov.br/" target="_blank" id="logo-nav">
+                    <img id="main-logo" alt="Logo da Etec de Santa Isabel" class="logotype"/>
+                </a>
+                <span id="first-division" class="division"></span>
+                <img id="labmis" src="img/plant.png" alt="Logo de sustentabilidade" class="logotype"/>
+            </section>
+
+            <section id="icons">
+
+                <!-- About-modal -->
+
+                <span class="clickable" onclick="openModal();">
+                    <span id="about" class="bi bi-question-circle"> </span>
+                </span>
+
+                <!-- Lang -->
+
+                <span class="clickable" onclick="toggleLang();">
+                    <span id="language" class="bi bi-globe2"> 
+                        PT
+                        <span id="down-arrow" class="bi bi-caret-down-fill"></span> 
+                    </span>
+                </span>
+
+                <!-- Theme-toggle -->
+
+                <span class="clickable">
+                    <span id="theme-icon" class="bi" onclick="changeTheme();"></span>
+                </span>
+
+                <!-- Burger-menu -->
+
+                <span class="division"></span>
+                <span id="burger-menu" class="bi bi-list" onclick="openSidebar();"></span>
+            </section>
+            
+        </header>
+
+        <!-- About-modal -->
+        
+        <section id="about-background" class="transparent-background">
+            <section id="about-modal">
+                <header id="modal-title"> Quem somos nós? </header>
+                <section id="about-content">
+                    <p class="about-paragraph">
+                        Somos um grupo de sete estudantes dedicados da ETEC de Santa Isabel, formado por Carol, Gabi, Isa, Khiuane, Kawany, Pedro e Guilherme. Unidos por uma proposta educacional desafiadora e enriquecedora, nos empenhamos em transformar o aprendizado teórico em práticas reais que possam impactar positivamente a sociedade. Este projeto foi concebido no contexto da disciplina "Laboratório de Mediação e Intervenção Sociocultural" (LabMIS), sob a orientação atenta e inspiradora da professora Rúbia Barbosa. Nosso objetivo principal é propor uma intervenção concreta e relevante que dialogue diretamente com as necessidades do mundo atual, ao mesmo tempo em que desenvolvemos nossas habilidades colaborativas, analíticas e criativas.                    </p>
+                    <p class="about-paragraph">
+                        A escolha pelo tema "Turismo Sustentável" reflete nossa preocupação com os desafios globais relacionados ao meio ambiente, à cultura e ao desenvolvimento econômico responsável. Vivemos em uma época em que o turismo, se não for conduzido de maneira consciente, pode acarretar graves impactos negativos, como a degradação ambiental, a exploração de comunidades locais e a perda de patrimônios culturais. No entanto, acreditamos que o turismo pode ser uma força transformadora quando planejado e executado com uma visão sustentável. Por isso, nosso blog busca educar, sensibilizar e inspirar leitores a adotar práticas que conciliem o prazer de viajar com a responsabilidade de preservar o planeta e valorizar as culturas locais.
+                    </p>
+                    <p class="about-paragraph">
+                        A escolha pelo tema "Turismo Sustentável" reflete nossa preocupação com os desafios globais relacionados ao meio ambiente, à cultura e ao desenvolvimento econômico responsável. Vivemos em uma época em que o turismo, se não for conduzido de maneira consciente, pode acarretar graves impactos negativos, como a degradação ambiental, a exploração de comunidades locais e a perda de patrimônios culturais. No entanto, acreditamos que o turismo pode ser uma força transformadora quando planejado e executado com uma visão sustentável. Por isso, nosso blog busca educar, sensibilizar e inspirar leitores a adotar práticas que conciliem o prazer de viajar com a responsabilidade de preservar o planeta e valorizar as culturas locais.
+                    </p>
+                    <p class="about-paragraph">
+                        Este blog não é apenas um trabalho escolar, mas uma expressão do nosso compromisso em contribuir para um futuro mais sustentável. Enxergamos o "Turismo Sustentável" como uma ponte entre o prazer de conhecer novos lugares e a responsabilidade de preservá-los para as gerações futuras. Ao longo de nossas páginas, apresentamos conteúdos que abrangem desde dicas práticas para viajantes conscientes até reflexões profundas sobre a importância da preservação ambiental e cultural. Esperamos que este espaço se torne uma fonte de informação e inspiração para todos aqueles que desejam explorar o mundo de forma ética e sustentável.                   
+                    </p>
+                    <p class="about-paragraph">
+                        Por fim, somos profundamente gratos à professora Rúbia Barbosa, cuja orientação foi indispensável para a realização deste projeto. Sua dedicação em estimular nossa autonomia e criatividade nos motivou a ir além do esperado, buscando sempre a excelência em cada etapa. Também agradecemos a ETEC de Santa Isabel por proporcionar um ambiente de ensino que incentiva a formação integral dos alunos. Este blog é, acima de tudo, um reflexo do esforço coletivo, da paixão pelo aprendizado e do desejo de fazer a diferença no mundo. Convidamos todos os leitores a explorarem este espaço com curiosidade e mente aberta, e a se juntarem a nós na missão de promover um turismo mais sustentável e consciente.
+                    </p>
+                </section>
+                <footer id="continue">
+                    <button id="continue-btn" onclick="closeModal();"> Continuar </button>
+                </footer>
+            </section>
+        </section>
+
+        <!-- Language Select -->
+
+        <section id="lang-select" class="lang-hidden">
+            <span class="lang-option" onclick="langSelect('pt')"> 
+                <span class="fi fi-br"></span>
+                PT-BR 
+            </span>
+            <span class="lang-option" onclick="langSelect('en')">
+                <span class="fi fi-us"></span> 
+                EN-US 
+            </span>
+        </section>
+
+        <!-- Side-bar -->
+
+        <section id="menu-background" class="transparent-background">
+            <nav id="side-bar" class="sidebar-hidden">
+                <header id="nav-header">
+                    <img src="img/plant.png" id="sidebar-icon"/>
+                    <span class="close-btn" onclick="closeSidebar();">
+                        ✕
+                    </span>
+                </header>
+                <section id="real-nav">
+                    <span> Blog </span>
+                </section>
+                <footer id="sidebar-footer">
+                    <span onclick="references('open');"> References </span>
+                </footer>
+            </nav>
+        </section>
+
+        <!-- References -->
+
+        <section id="references-bg" class="transparent-background">
+            <span id="close-ref" onclick="references('close')"> ✕ </span>
+            <ul id="references">
+                <li class="reference"> ‌Adultos entre 35 e 44 anos são os que mais viajam pelo país, revela estudo. Disponível em: <a href=""> https://www.gov.br/turismo/pt-br/assuntos/ultimas-noticia/adultos-entre-35-e-44-anos-sao-os-que-mais-viajam-pelo-paisc-revela-estudo </a>. Acesso em: 1 nov. 2024. </li>
+                <li class="reference"> ASSESSORIA APL. Brasil perde leitores para redes sociais. Disponível em: <a href=""> https://www.academiapiauiensedeletras.org.br/brasil-perde-leitores-para-redes-sociais/ </a>. Acesso em: 1 nov. 2024. </li>
+                <li class="reference"> Como as novas gerações viajam? - Harus. Disponível em: <a href=""> https://harus.ind.br/como-as-novas-geracoes-viajam/ </a>. Acesso em: 1 nov. 2024. </li>
+                <li class="reference"> Laura Sinay: ‘Não existe turismo sustentável no Brasil’. Disponível em: <a href=""> https://gamarevista.uol.com.br/semana/pode-viajar/nao-existe-turismo-sustentavel-no-brasil-entrevista-sobre-viagem-reputacao-do-brasil/ </a>. Acesso em: 25 Nov. 2024.</li>
+                <li class="reference"> Pesquisa aponta que 74% dos turistas escolhem o turismo rural pela proximidade com a natureza.Disponível em: <a href=""> https://www.gov.br/turismo/pt-br/assuntos/noticias/pesquisa-aponta-que-74-dos-turistas-escolhem-o-turismo-rural-pela-proximidade-com-a-natureza </a>. </li>
+                <li class="reference"> SIQUEIRA, E.; LINS, I.; LAÉRCIO POL FACHIN. A RELAÇÃO ENTRE TDAH E O TEMPO DE TELA NA INFÂNCIA: um protocolo de revisão de escopo. Brazilian Journal of Implantology and Health Sciences , v. 6, n. 8, p. 5124–5147, 2024. </li>
+                <li class="reference"> Tempo de concentração das pessoas na era digital é menor que o de um peixe. Disponível em: <a href=""> https://oglobo.globo.com/economia/tempo-de-concentracao-das-pessoas-na-era-digital-menor-que-de-um-peixe-16153807 </a>. </li>
+            </ul>
+        </section>
+
+        <!-- Main-area -->
+
+        <section id="main-area">
+            <main id="blog-main">
+
+                <!-- Main-blog -->
+
+                <section id="content">
+                    
+                    <nav id="nav-sidebar">
+                        <ul id="nav-ul">
+                            <li class="list-item checked"> 
+                                <a class="nav-item" href=""> Início </a>    
+                            </li>
+                            <li class="list-item"> 
+                                <a class="nav-item" href=""> Desenvolvimento </a>    
+                            </li>
+                            <li class="list-item"> 
+                                <a class="nav-item" href=""> Prática </a>    
+                            </li>
+                            <li class="list-item"> 
+                                <a class="nav-item" href=""> Conclusão </a>    
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <section id="main-content">
+                        
+                        <h1 id="content-title"> </h1> <!-- title -->
+                        <p class="paragraph"> </p> <!-- 0 -->
+
+                        <h2 class="content-subtitle"> </h2> <!-- subtitle 0 -->
+
+                        <p class="paragraph"> </p> <!-- 1 -->
+
+                        <h2 class="content-subtitle"> </h2>
+
+                        <p class="paragraph"> O turismo sustentável é um modelo de turismo que busca minimizar os impactos negativos
+                        sobre o meio ambiente, a cultura local e a economia, promovendo a conservação dos
+                        recursos naturais e a valorização das comunidades locais. Ele incentiva práticas que
+                        respeitam o meio ambiente, como a preservação da biodiversidade e o uso responsável de
+                        recursos naturais. Já o turismo cultural se concentra na promoção e valorização da
+                        cultura, tradições, história e modos de vida das comunidades locais. Esse tipo de
+                        turismo permite que os visitantes conheçam e interajam com a cultura local, promovendo
+                        o intercâmbio cultural e a preservação de patrimônios imateriais. </p>
+
+                        <p class="paragraph"> Quando combinados, o turismo sustentável e o turismo cultural criam experiências
+                        que não apenas beneficiam os visitantes, mas também as comunidades do local,
+                        incentivando a proteção do meio ambiente e a valorização das tradições culturais.
+                        Isso pode incluir atividades como visitas a feiras de artesanato, participação em
+                        festivais locais, e apoio a iniciativas de conservação ambiental. Ambos desempenham
+                        um papel importante na educação, oferecendo experiências práticas que promovem a
+                        consciência ambiental e a valorização das culturas locais. Dentre as experiências
+                        desenvolvidas para a educação através do turismo, temos:
+                        <ul>
+                            <li>Aprendizado Experiencial; </li>
+                            <li> Conscientização Ambiental; </li>
+                            <li> Valorização da Cultura Local; </li>
+                            <li> Projetos de Serviço Comunitário; </li>
+                            <li> Desenvolvimento de Habilidades; </li>
+                            <li> Currículo Interdisciplinar; </li>
+                            <li> Incentivo ao Empreendedorismo Sustentável. </li>
+                        </ul> </p>
+                        <p class="paragraph"> Tendo em vista o cenário atual em relação ao turismo sustentável e cultural,
+                        vemos uma grande iniciativa para que esse turismo realmente ocorra de uma forma
+                        sustentável. Atualmente, as cidades se dispõem a aplicar práticas aos turistas que
+                        visitam a cidade, contribuindo com práticas sustentáveis. </p>
+
+                        <h2 class="content-subtitle"> Objetivos do Projeto </h2>
+
+                        <p class="paragraph"> Os objetivos do turismo sustentável são bem claros, tentando unir e atender as
+                            necessidades presentes de ambos, sem afetar gerações futuras em realizar seus
+                            próprios interesses, sejam os viajantes ou as comunidades locais. Visando
+                            desenvolver oportunidades que podem vir futuramente, com base nos cinco pilares
+                            do crescimento sustentável que são:
+                        <ul>
+                            <li> Pessoas: garante dignidade e igualdade; </li>
+                            <li> Planeta: protege recursos naturais e luta contra mudanças climáticas; </li> 
+                            <li> Prosperidade: propõem que todos tenham uma vida de qualidade; </li> 
+                            <li> Paz: assegura sociedades pacíficas, inclusivas e justas; </li> 
+                            <li> Parcerias: foca na colaboração global. </li>
+                        </ul> </p>
+                        <h2 class="content-subtitle"> Público Alvo </h2>
+                        
+                        <p class="paragraph"> O turismo sustentável e cultural atrai principalmente viajantes conscientes, 
+                        que buscam minimizar o impacto ambiental de suas viagens e se conectar de maneira 
+                        genuína com culturas locais. De acordo com o Ministério do Turismo, a faixa etária 
+                        que mais viaja pelo país são adultos entre 35 e 44 anos. No entanto, quando o foco 
+                        é a preocupação com o meio ambiente, um estudo realizado pelo site Harus aponta que
+                        jovens entre 8 e 23 anos (conhecidos popularmente por serem a geração Z), demonstram
+                        maior interesse em práticas sustentáveis, onde: 38% preferem hospedagens ecológicas,
+                        enquanto 34% procuram pacotes de viagem sustentáveis, e os outros 21% priorizam voos
+                        com menores emissões de CO2. </p>
+
+                        <p class="paragraph"> A ideia de viajar de forma responsável, vem contribuindo para o desenvolvimento 
+                            das comunidades locais, e também encontramos o “eco” entre as famílias e adultos 
+                            mais velhos, que valorizam a transmissão de princípios de preservação ambiental e
+                            cultural para que isso possa ser passado para as futuras gerações. </p>
+                        <p class="paragraph"> De maneira geral, o público interessado em turismo sustentável, é motivado por
+                            uma consciência ambiental e pelo desejo de imersão cultural, buscando experiências
+                            que contribuam com um legado positivo. </p>
+
+                        <h2 class="content-subtitle"> Conclusão </h2> 
+
+                        <p class="paragraph"> O turismo sustentável surge como uma abordagem fundamental para a preservação não
+                            apenas do meio ambiente, mas também da cultura local. Ao promover práticas que
+                            respeitam e valorizam as tradições e modos de vida das comunidades anfitriãs, o
+                            turismo sustentável contribui para a conservação do patrimônio cultural e para o
+                            fortalecimento da identidade local. </p>
+                        <p class="paragraph"> Através da conscientização dos viajantes sobre a importância de interagir de forma
+                            responsável com as culturas que visitam, é possível interagir um intercâmbio
+                            enriquecedor que beneficia tanto os turistas quanto os residentes do local. Além
+                            disso, iniciativas de turismo sustentável incentivam o desenvolvimento econômico
+                            das comunidades, criando oportunidades de emprego e promovendo a valorização dos
+                            produtos e serviços locais. </p>
+                        <p class="paragraph"> Portanto, ao escolher viajar de maneira sustentável, cada turista se torna um
+                            agente de mudança, contribuindo para a preservação das culturas e do meio ambiente.
+                            É essencial que tanto os viajantes quanto os operadores turísticos adotem práticas
+                            que priorizem a sustentabilidade, garantindo que as futuras gerações possam
+                            desfrutar da diversidade cultural e natural do nosso planeta. O presente trabalho 
+                            sobre turismo sustentável e cultural, resultou na criação de um blog, demonstrando
+                            a importância de integrar práticas sustentáveis com a valorização da
+                            cultura local. Através da pesquisa e da produção de conteúdo, foi possível
+                            evidenciar como o turismo pode ser uma ferramenta poderosa para promover a
+                            preservação ambiental e a riqueza cultural das comunidades. </p>
+                        <p class="paragraph"> O futuro do turismo depende de nossa capacidade de equilibrar exploração e
+                            respeito, criando experiências que sejam verdadeiramente enriquecedoras e
+                            sustentáveis. </p>
+
+
+                        <!-- Members list -->
+
+                        <footer id="credits">
+                            <section id="by">
+                                <header id="group">
+                                    <span class="bi bi-person"></span> 
+                                    Publicado por &nbsp; <span class="bold"> Grupo Turismo Sustentável </span>, Etec de Santa Isabel:
+                                </header>
+
+                                <ul id="members">
+                                </ul>
+
+                                <!-- Profile modal -->
+
+                                <section id="profile" class="transparent-background">
+                                    <section id="profile-modal">
+                                        <span id="profile-banner">
+                                        </span>
+                                        <span id="profile-info">
+                                            <span id="member-name"> 
+
+                                            </span>
+                                        </span>
+                                    </section>
+                                </section>
+                            </section>
+                        </footer>
+                    </section>
+                </section>
+            </main>
+
+            <!-- Page-footer -->
+
+            <footer id="page-footer">
+
+                <!-- Organization logos-->
+
+                <section id="organizations-logos">
+                    <figure class="figures">
+                        <img id="etec-logo" alt="Etec de Santa Isabel" class="orgs"/>
+                    </figure>
+                    <figure class="figures">
+                        <img id="cps-logo" alt="Centro Paula Souza" class="orgs"/>
+                    </figure>
+                    <figure class="figures">
+                        <img id="sp-logo" alt="Governo do Estado de São Paulo" class="orgs"/>
+                    </figure>
+                </section>
+
+                <!-- Aditional info-->
+
+                <ul id="info">
+                    
+                </ul>
+
+                <!-- Copyright Free! -->
+
+                <section id="rights">
+                    <span> &copy; 2024 2º MTEC Informática para Internet. Todos os direitos reservados - Etec de Santa Isabel. </span>
+                </section>
+
+            </footer>
+        </section>
+        
+        <!-- Scripts -->
+
+        <script src="javascript/package.js" type="text/javascript"></script>
+        <script src="javascript/script.js" type="text/javascript"></script>
+
+    </body>
+</html>
